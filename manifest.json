@@ -1,0 +1,10 @@
+{
+  "name": "StudyCompanions",
+  "description": "The extension provides a gamified experience to help stay focused while studying with a virtual pet.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "homepage.html",
+    "default_icon": "pet_face.png"
+  }
+}
