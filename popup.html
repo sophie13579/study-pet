@@ -5,16 +5,19 @@
         <link rel="stylesheet" href="styles.css" />
         <title>Study Pet</title>
     </head>
+
+
   <body>
     <script src="popup.js"></script>
     <h1>Study Pet</h1>
+
     <div class="image-container left-align">
         <img src="cat_animated.gif" alt="Cat Singing" width="250" />
         <p class="centred-text">Larry</p>
 
-    <!-- Progress bar-->
+    <!-- XP bar -->
       <div class="progress-container centred-element">
-        <div class="progress-label centred-text">XP</div>
+        <div class="progress-label left-align">XP</div>
           <div class="progress-bar">
             <div class="xp-fill" id="xpFill"></div>
           </div>
@@ -24,17 +27,26 @@
 
     </div>
 
-    <!-- Progress Bar -->
-    <div class="xp-container">
-      <div class="xp-label">XP</div>
-      <div class="progress-bar">
-        <div class="xp-fill"></div>
+    <!-- Health Bar -->
+      <div class="progress-container left-align">
+        <div class="progress-label left-align">Health</div>
+          <div class="progress-bar">
+            <div class="xp-fill" id="healthFill"></div>
+          </div>
+        <div class="progress-num centred-text" id="healthNum">0 / 100</div>
       </div>
-      <div class="xp-text">0 / 100</div>
-    </div>
+  <!---------------->
 
+  <!-- Hunger Bar -->
+      <div class="progress-container left-align">
+        <div class="progress-label left-align">Hunger</div>
+          <div class="progress-bar">
+            <div class="xp-fill" id="hungerFill"></div>
+          </div>
+        <div class="progress-num centred-text" id="hungerNum">0 / 100</div>
+      </div>
+  <!---------------->
 
-  <label for="file">Hunger:</label><progress id="file" max="100" value="70">70%</progress>
 
   </body>
 </html>
