@@ -1,3 +1,21 @@
+@font-face {
+  font-family: Pixeloid Mono;
+  src: url(fonts/PixeloidMono-aYe1R.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Pixeloid Sans;
+  src: url(fonts/PixeloidSans-E40en.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Pixeloid Bold;
+  src: url(fonts/PixeloidSansBold-OG894.ttf);
+  font-weight: bold;
+}
+
 .left-align {
     float: left;
     margin-right: 15px;
@@ -13,10 +31,12 @@
 body {
     margin: 20px;
     padding: 20px;
+    font-family: Pixeloid Sans, sans-serif;
 }
 
 h1 {
     margin-bottom: 20px;
+    font-family: Pixeloid Bold, sans-serif;
 }
 
 p {
