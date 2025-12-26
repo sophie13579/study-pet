@@ -1,52 +1,60 @@
 <html lang="en-gb">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css" />
-        <title>Study Pet</title>
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Study Pet</title>
+</head>
 
 
-  <body>
-    <script src="popup.js"></script>
-    <h1>Study Pet</h1>
+<body>
+<script src="popup.js"></script>
 
-    <div class="image-container left-align">
-        <img src="cat_animated.gif" alt="Cat Singing" width="250" />
-        <p class="centred-text">Larry</p>
-    </div>
+<h1>Study Pet</h1>
 
-    <div class="stack-container left-align">
+<div class="tabs">
+  <input type="image" src="tab_icons/house_icon.png" />
+</div>
+
+<div class="stack-columns">
+  <div class="image-container left-align">
+    <img src="cat_animated.gif" alt="Cat Singing" width="250" />
+    <p class="centred-text">Larry</p>
+  </div>
+
+  <div class="stack-rows left-align">
     <!-- XP bar -->
-      <div class="progress-container centred-element">
-        <div class="progress-label left-align">XP</div>
-          <div class="progress-bar">
-            <div class="xp-fill" id="xpFill"></div>
-          </div>
-        <div class="progress-num centred-text" id="xpNum">0 / 100</div>
+    <div class="progress-container centred-element">
+      <div class="progress-label left-align">XP</div>
+      <div class="progress-bar">
+        <div class="xp-fill" id="xpFill"></div>
       </div>
-    <!---------------->
-    <!-- Health Bar -->
-      <div class="progress-container">
-        <div class="progress-label left-align">Health</div>
-          <div class="progress-bar">
-            <div class="xp-fill" id="healthFill"></div>
-          </div>
-        <div class="progress-num centred-text" id="healthNum">0 / 100</div>
-      </div>
-  <!---------------->
-
-  <!-- Hunger Bar -->
-      <div class="progress-container">
-        <div class="progress-label left-align">Hunger</div>
-          <div class="progress-bar">
-            <div class="xp-fill" id="hungerFill"></div>
-          </div>
-        <div class="progress-num centred-text" id="hungerNum">0 / 100</div>
-      </div>
-  <!---------------->
+      <div class="progress-num centred-text" id="xpNum">0 / 100</div>
     </div>
+    <!---------------->
+
+    <!-- Health Bar -->
+    <div class="progress-container">
+      <div class="progress-label left-align">Health</div>
+      <div class="progress-bar">
+        <div class="xp-fill" id="healthFill"></div>
+      </div>
+      <div class="progress-num centred-text" id="healthNum">0 / 100</div>
+    </div>
+    <!---------------->
+
+    <!-- Hunger Bar -->
+    <div class="progress-container">
+      <div class="progress-label left-align">Hunger</div>
+      <div class="progress-bar">
+        <div class="xp-fill" id="hungerFill"></div>
+      </div>
+      <div class="progress-num centred-text" id="hungerNum">0 / 100</div>
+    </div>
+    <!---------------->
+  </div>
+</div>
 
 
-  </body>
+</body>
 </html>

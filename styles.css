@@ -1,19 +1,19 @@
 @font-face {
-  font-family: Pixeloid Mono;
-  src: url(fonts/PixeloidMono-aYe1R.ttf);
-  font-weight: normal;
+    font-family: Pixeloid Mono;
+    src: url(fonts/PixeloidMono-aYe1R.ttf);
+    font-weight: normal;
 }
 
 @font-face {
-  font-family: Pixeloid Sans;
-  src: url(fonts/PixeloidSans-E40en.ttf);
-  font-weight: normal;
+    font-family: Pixeloid Sans;
+    src: url(fonts/PixeloidSans-E40en.ttf);
+    font-weight: normal;
 }
 
 @font-face {
-  font-family: Pixeloid Bold;
-  src: url(fonts/PixeloidSansBold-OG894.ttf);
-  font-weight: bold;
+    font-family: Pixeloid Bold;
+    src: url(fonts/PixeloidSansBold-OG894.ttf);
+    font-weight: bold;
 }
 
 .left-align {
@@ -28,16 +28,18 @@
     margin-bottom: 10px;
 }
 
-.stack-container {
-  display: flex;
-  flex-direction: column; /* stack vertically */
-  gap: 10px; /* optional spacing */
+.stack-rows {
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    gap: 10px;
 }
 
 
 body {
     margin: 20px;
     padding: 20px;
+    width: max-content;
+    height: max-content;
     font-family: Pixeloid Sans, sans-serif;
 }
 
@@ -60,21 +62,27 @@ p {
     margin: auto;
 }
 
-body {
-    width: 800px;
-    height: 400px;
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-direction: column;
 }
+
+.stack-columns {
+    display: flex;
+    flex-direction: row; /* stack horizontally */
+    gap: 10px;}
 
 /* Progress bar*/
 .progress-bar {
-  width: 200px;
-  height: 16px;
-  background: #111;
-  border: 3px solid #ffffff;
-  /*border-radius: 8px;          !* round outer edges *!*/
-  padding: 2px;
-  overflow: hidden;            /* keeps fill inside rounded edges */
-  margin: auto;
+    width: 200px;
+    height: 16px;
+    background: #111;
+    border: 3px solid #ffffff;
+    padding: 2px;
+    overflow: hidden;            /* keeps fill inside rounded edges */
+    margin: auto;
 }
 
 .progress-label {
@@ -82,21 +90,21 @@ body {
 }
 
 .xp-fill {
-  height: 100%;
-  width: 0;                  /* example */
-  background: #44ff44;
-  /*border-radius: 4px;          !* round inner edges *!*/
-  border: 2px solid #22aa22;   /* inner border */
-  box-sizing: border-box;
-  transition: width 0.6s steps(10);
+    height: 100%;
+    width: 0;                  /* example */
+    background: #44ff44;
+    /*border-radius: 4px;          !* round inner edges *!*/
+    border: 2px solid #22aa22;   /* inner border */
+    box-sizing: border-box;
+    transition: width 0.6s steps(10);
 }
 
 .xp-fill::after {
-  content: "";
-  display: block;
-  height: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.2);
+    content: "";
+    display: block;
+    height: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .progress-container {
