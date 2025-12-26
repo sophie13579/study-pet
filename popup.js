@@ -1,13 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // Config for each bar
   const bars = [
     { fillId: "xpFill", numId: "xpNum", current: 0, max: 100 },
     { fillId: "healthFill", numId: "healthNum", current: 0, max: 100 },
     { fillId: "hungerFill", numId: "hungerNum", current: 0, max: 100 }
   ];
 
-  // Reusable update function
   function updateBar(bar, amount) {
     bar.current = Math.min(bar.current + amount, bar.max);
     const percent = (bar.current / bar.max) * 100;
@@ -18,17 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
     fillElem.style.width = percent + "%";
     numElem.textContent = `${bar.current} / ${bar.max}`;
 
-    // Level-up visual for XP (or any bar you want)
     if (bar.current === bar.max) {
       fillElem.classList.add("level-up");
       setTimeout(() => fillElem.classList.remove("level-up"), 300);
     }
   }
 
-  // Example: set initial values
   updateBar(bars[0], 70);  // XP
   updateBar(bars[1], 50);  // Health
   updateBar(bars[2], 30);  // Hunger
 
-  // Optional: you can later call updateBar(bar, amount) dynamically
 });

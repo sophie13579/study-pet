@@ -28,6 +28,13 @@
     margin-bottom: 10px;
 }
 
+.stack-container {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 10px; /* optional spacing */
+}
+
+
 body {
     margin: 20px;
     padding: 20px;
