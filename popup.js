@@ -26,4 +26,33 @@ document.addEventListener("DOMContentLoaded", () => {
     updateBar(bars[1], 50);  // Health
     updateBar(bars[2], 30);  // Hunger
 
+    const tabs = document.querySelectorAll(".tab");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    const tabIds = Array.from(tabContents).map(content => content.id);
+    console.log("Tab IDS: ", tabIds);
+
+    tabs[0].classList.add("active");
+    tabContents[0].classList.add("active");
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            console.log("Clicked tab:", tab);
+            console.log("Tab Ids: ", tabIds);
+
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+                tabContents[i].classList.remove("active");
+            };
+
+            tab.classList.add("active");
+
+            const contentId = tab.id.replace("-button", "") + "-tab";
+            console.log("Content ID: ", contentId)
+            const activeContent = document.getElementById(contentId)
+            console.log("Active Content: ", activeContent)
+            if (activeContent) activeContent.classList.add("active");
+        });
+    });
+
 });

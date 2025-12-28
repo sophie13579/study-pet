@@ -12,56 +12,69 @@
 
 <h1>Study Pet</h1>
 
+<!-- Tabs -->
 <div class="tabs">
-  <input type="image" src="tab_icons/home.png" width="60" height="60"/>
-  <input type="image" src="tab_icons/food_basket.png" width="60" height="60" />
-  <input type="image" src="tab_icons/leaderboard.png" width="60" height="60" />
-  <input type="image" src="tab_icons/pet_gallery.png" width="60" height="60" />
-  <input type="image" src="tab_icons/shop.png" width="60" height="60" />
-  <input type="image" src="tab_icons/pomodoro.png" width="60" height="60" />
-  </button>
-
+  <button class="tab" id="home-button"><img src="tab_icons/home.png" draggable="false" alt="Home"></button>
+  <button class="tab" id="pomodoro-button"><img src="tab_icons/pomodoro.png" draggable="false" alt="Pomodoro"></button>
+  <button class="tab" id="food-button"><img src="tab_icons/food.png" draggable="false" alt="Food"></button>
+  <button class="tab" id="shop-button"><img src="tab_icons/shop.png" draggable="false" alt="Shop"></button>
+  <button class="tab" id="pets-button"><img src="tab_icons/pets.png" draggable="false" alt="Pets"></button>
+  <button class="tab" id="ranking-button"><img src="tab_icons/ranking.png" draggable="false" alt="Ranking"></button>
 </div>
 
-<div class="stack-columns">
-  <div class="image-container left-align">
-    <img src="cat_animated.gif" alt="Cat Singing" width="250" />
-    <p class="centred-text">Larry</p>
-  </div>
-
-  <div class="stack-rows left-align">
-    <!-- XP bar -->
-    <div class="progress-container centred-element">
-      <div class="progress-label left-align">XP</div>
-      <div class="progress-bar">
-        <div class="xp-fill" id="xpFill"></div>
-      </div>
-      <div class="progress-num centred-text" id="xpNum">0 / 100</div>
+<!-- Home Tab -->
+<div class="tab-content" id="home-tab">
+  <div class="stack-columns">
+    <div class="image-container left-align">
+      <img src="cat_animated.gif" alt="Cat Singing" width="250" draggable="false" />
+      <p class="centred-text">Larry</p>
     </div>
-    <!---------------->
 
-    <!-- Health Bar -->
-    <div class="progress-container">
-      <div class="progress-label left-align">Health</div>
-      <div class="progress-bar">
-        <div class="xp-fill" id="healthFill"></div>
+    <div class="stack-rows left-align">
+      <!-- XP bar -->
+      <div class="progress-container centred-element">
+        <div class="progress-label left-align">XP</div>
+        <div class="progress-bar">
+          <div class="xp-fill" id="xpFill"></div>
+        </div>
+        <div class="progress-num centred-text" id="xpNum">0 / 100</div>
       </div>
-      <div class="progress-num centred-text" id="healthNum">0 / 100</div>
-    </div>
-    <!---------------->
 
-    <!-- Hunger Bar -->
-    <div class="progress-container">
-      <div class="progress-label left-align">Hunger</div>
-      <div class="progress-bar">
-        <div class="xp-fill" id="hungerFill"></div>
+      <!-- Health Bar -->
+      <div class="progress-container">
+        <div class="progress-label left-align">Health</div>
+        <div class="progress-bar">
+          <div class="xp-fill" id="healthFill"></div>
+        </div>
+        <div class="progress-num centred-text" id="healthNum">0 / 100</div>
       </div>
-      <div class="progress-num centred-text" id="hungerNum">0 / 100</div>
+
+      <!-- Hunger Bar -->
+      <div class="progress-container">
+        <div class="progress-label left-align">Hunger</div>
+        <div class="progress-bar">
+          <div class="xp-fill" id="hungerFill"></div>
+        </div>
+        <div class="progress-num centred-text" id="hungerNum">0 / 100</div>
+      </div>
     </div>
-    <!---------------->
   </div>
 </div>
 
+<!-- Pomodoro Tab -->
+<div class="tab-content" id="pomodoro-tab"></div>
+
+<!-- Food Tab -->
+<div class="tab-content" id="food-tab"></div>
+
+<!-- Shop Tab -->
+<div class="tab-content" id="shop-tab"></div>
+
+<!-- Pets Tab -->
+<div class="tab-content" id="pets-tab"></div>
+
+<!-- Ranking Tab -->
+<div class="tab-content" id="ranking-tab"></div>
 
 </body>
 </html>
