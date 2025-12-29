@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    // Progress bars update
     const bars = [
         { fillId: "xpFill", numId: "xpNum", current: 0, max: 100 },
         { fillId: "healthFill", numId: "healthNum", current: 0, max: 100 },
@@ -13,10 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const fillElem = document.getElementById(bar.fillId);
         const numElem = document.getElementById(bar.numId);
 
-        fillElem.style.width = percent + "%";
-        numElem.textContent = `${bar.current} / ${bar.max}`;
+        if (fillElem) fillElem.style.width = percent + "%";
+        if (numElem) numElem.textContent = `${bar.current} / ${bar.max}`;
 
-        if (bar.current === bar.max) {
+        if (bar.current === bar.max && fillElem) {
             fillElem.classList.add("level-up");
             setTimeout(() => fillElem.classList.remove("level-up"), 300);
         }
@@ -26,33 +27,41 @@ document.addEventListener("DOMContentLoaded", () => {
     updateBar(bars[1], 50);  // Health
     updateBar(bars[2], 30);  // Hunger
 
+    // Tabs show and hide
     const tabs = document.querySelectorAll(".tab");
     const tabContents = document.querySelectorAll(".tab-content");
+    const tabTexts = document.querySelectorAll(".tab-text");
 
-    const tabIds = Array.from(tabContents).map(content => content.id);
-    console.log("Tab IDS: ", tabIds);
-
-    tabs[0].classList.add("active");
-    tabContents[0].classList.add("active");
+    if (tabs.length) tabs[0].classList.add("active");
+    if (tabContents.length) tabContents[0].classList.add("active");
 
     tabs.forEach(tab => {
         tab.addEventListener("click", () => {
-            console.log("Clicked tab:", tab);
-            console.log("Tab Ids: ", tabIds);
-
-            for (let i = 0; i < tabs.length; i++) {
-                tabs[i].classList.remove("active");
-                tabContents[i].classList.remove("active");
-            };
+            tabs.forEach(t => t.classList.remove("active"));
+            tabContents.forEach(c => c.classList.remove("active"));
 
             tab.classList.add("active");
 
             const contentId = tab.id.replace("-button", "") + "-tab";
-            console.log("Content ID: ", contentId)
-            const activeContent = document.getElementById(contentId)
-            console.log("Active Content: ", activeContent)
+            const activeContent = document.getElementById(contentId);
             if (activeContent) activeContent.classList.add("active");
         });
-    });
 
+        tab.addEventListener("mouseover", () => {
+            tabTexts.forEach(t => t.classList.remove("hover"));
+            tab.classList.add("hover");
+
+            const textId = tab.id.replace("-button", "") + "-text";
+            const activeText = document.getElementById(textId);
+            if (activeText) activeText.classList.add("hover");
+        });
+
+        tab.addEventListener("mouseout", () => {
+            tab.classList.remove("hover");
+
+            const textId = tab.id.replace("-button", "") + "-text";
+            const activeText = document.getElementById(textId);
+            if (activeText) activeText.classList.remove("hover");
+        });
+    });
 });

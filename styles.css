@@ -1,3 +1,4 @@
+/* Font */
 @font-face {
   font-family: Pixeloid Mono;
   src: url(fonts/PixeloidMono-aYe1R.ttf);
@@ -16,29 +17,10 @@
   font-weight: bold;
 }
 
-.left-align {
-  float: left;
-  margin-right: 15px;
-  margin-bottom: 10px;
-}
-
-.right-align {
-  float: right;
-  margin-left: 15px;
-  margin-bottom: 10px;
-}
-
-.stack-rows {
-  display: flex;
-  flex-direction: column; /* stack vertically */
-  gap: 10px;
-}
-
-
 body {
   margin: 20px;
   padding: 20px;
-  width: 500px;
+  width: 550px;
   height: 434.852px;
   font-family: Pixeloid Sans, sans-serif;
 }
@@ -54,8 +36,24 @@ p {
   font-size: 18px;
 }
 
-.centred-text {
-  text-align: center;
+/* Image */
+.left-align {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.right-align {
+  float: right;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+/* Align */
+.stack-rows {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 10px;
 }
 
 .centred-element {
@@ -63,14 +61,25 @@ p {
   margin: auto;
 }
 
+.centred-text {
+  text-align: center;
+}
+
+.stack-columns {
+  display: flex;
+  flex-direction: row; /* stack horizontally */
+  gap: 10px;
+}
+
 /* Tabs */
 .tabs {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
   padding: 0;
   gap: 15px;
+  overflow: visible;
 }
 
 .tab {
@@ -102,21 +111,47 @@ p {
 .tab:first-child {
   padding-left: 0;
 }
-/*--------------------*/
+
+.tabs > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+  width: auto;
+}
+
+.tab-text {
+  font-size: 15px;
+  position: absolute;
+  top: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.tab-text.hover {
+  display: block;
+}
+
+.tab-text {
+  display: none;
+}
+
 
 /* Tab Content */
 .tab-content {
   display: none;
 }
 
-.tab-content.active {
-  display: block;
+tab.active {
+  color-adjust: revert;
 }
 
-.stack-columns {
-  display: flex;
-  flex-direction: row; /* stack horizontally */
-  gap: 10px;
+.tab-content.active {
+  display: block;
 }
 
 /* Progress bar*/
@@ -136,10 +171,9 @@ p {
 
 .xp-fill {
   height: 100%;
-  width: 0;                  /* example */
+  width: 0;
   background: #44ff44;
-  /*border-radius: 4px;          !* round inner edges *!*/
-  border: 2px solid #22aa22;   /* inner border */
+  border: 2px solid #22aa22;
   box-sizing: border-box;
   transition: width 0.6s steps(10);
 }
@@ -147,7 +181,7 @@ p {
 .xp-fill::after {
   content: "";
   display: block;
-  height: 0;
+  height: 2px;
   width: 100%;
   background: rgba(255, 255, 255, 0.2);
 }
@@ -158,4 +192,6 @@ p {
   flex-direction: column
 }
 
-/*-------------------*/
+.level-up {
+/*  idk :( */
+}
