@@ -1,2 +1,2 @@
-# pet-study-buddy #
-Hello! This is the repository for the Pet Study Buddy.
+# study-pet #
+Hello! This is the repository for the Study Pet chrome extension.

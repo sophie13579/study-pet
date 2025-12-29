@@ -17,6 +17,7 @@
   font-weight: bold;
 }
 
+/* Base */
 body {
   margin: 20px;
   padding: 20px;
@@ -25,6 +26,7 @@ body {
   font-family: Pixeloid Sans, sans-serif;
 }
 
+/* Typography */
 h1 {
   margin-bottom: 20px;
   font-family: Pixeloid Bold, sans-serif;
@@ -56,6 +58,12 @@ p {
   gap: 10px;
 }
 
+.stack-columns {
+  display: flex;
+  flex-direction: row; /* stack horizontally */
+  gap: 10px;
+}
+
 .centred-element {
   width: max-content;
   margin: auto;
@@ -63,12 +71,6 @@ p {
 
 .centred-text {
   text-align: center;
-}
-
-.stack-columns {
-  display: flex;
-  flex-direction: row; /* stack horizontally */
-  gap: 10px;
 }
 
 /* Tabs */
@@ -80,6 +82,17 @@ p {
   padding: 0;
   gap: 15px;
   overflow: visible;
+  position: relative;
+}
+
+.tabs > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+  width: auto;
+  position: relative;
 }
 
 .tab {
@@ -90,7 +103,6 @@ p {
   -webkit-appearance: none;
   outline: none;
   cursor: pointer;
-
   height: 60px;
   display: flex;
   align-items: center;
@@ -100,25 +112,16 @@ p {
   box-sizing: border-box;
 }
 
+.tab:first-child {
+  padding-left: 0;
+}
+
 .tab img {
   display: block;
   height: 100%;
   width: auto;
   pointer-events: none;
   padding: 0;
-}
-
-.tab:first-child {
-  padding-left: 0;
-}
-
-.tabs > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  overflow: visible;
-  width: auto;
 }
 
 .tab-text {
@@ -140,21 +143,36 @@ p {
   display: none;
 }
 
+.active-line {
+  position: absolute;
+  top: 100%;
+  margin-top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  display: none;
+}
+
+.tab.active ~ .active-line {
+  display: block;
+}
 
 /* Tab Content */
 .tab-content {
   display: none;
 }
 
-tab.active {
-  color-adjust: revert;
-}
-
 .tab-content.active {
   display: block;
 }
 
-/* Progress bar*/
+/* Progress bar */
+.progress-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column
+}
+
 .progress-bar {
   width: 200px;
   height: 16px;
@@ -186,12 +204,7 @@ tab.active {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.progress-container {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column
-}
-
+/* Placeholder */
 .level-up {
-/*  idk :( */
+  /*  idk :( */
 }
