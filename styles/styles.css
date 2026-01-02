@@ -30,7 +30,6 @@ body {
 h1 {
   margin-bottom: 20px;
   font-family: Pixeloid Bold, sans-serif;
-  /*text-align: center;*/
 }
 
 p {
@@ -67,6 +66,7 @@ p {
 .centred-element {
   width: max-content;
   margin: auto;
+  display: block;
 }
 
 .centred-text {
@@ -96,12 +96,7 @@ p {
 }
 
 .tab {
-  background: none;
-  border: none;
-  box-shadow: none;
-  appearance: none;
-  -webkit-appearance: none;
-  outline: none;
+  all: unset;
   cursor: pointer;
   height: 60px;
   display: flex;
@@ -207,4 +202,97 @@ p {
 /* Placeholder */
 .level-up {
   /*  idk :( */
+}
+
+/* Timer */
+.tomato-timer {
+  position: relative;
+  width: 200px;
+  height: auto;
+}
+
+.tomato-timer img {
+  width: 100%;
+  object-fit: contain;
+  height: auto;
+  display: block;
+}
+
+.tomato-text {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-47.5%, -17.5%);
+  font-size: 55px;
+  font-family: Pixeloid Sans, sans-serif;
+}
+
+/* Timer buttons */
+.timer-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px auto 0;
+  width: max-content;
+}
+
+.pause-unpause-stack {
+  position: relative;
+  height: 55px;
+  width: 55px;
+  flex: 0 0 55px;
+}
+
+.pause-unpause-stack .timer-button {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.pause-unpause-stack #pause-button {
+  display: none;
+}
+
+.pause-unpause-stack.paused #pause-button {
+  display: grid;
+}
+
+.pause-unpause-stack.paused #unpause-button {
+  display: none;
+}
+
+.timer-button {
+  all: unset;
+  cursor: pointer;
+  height: 55px;
+  width: max-content;
+  display: block;
+}
+
+#reset-button {
+  position: static;
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.timer-button img {
+  display: block;
+  height: 55px;
+  width: 55px;
+  object-fit: contain;
+  display: block;
+}
+
+.completed-pomodoros {
+  text-align: center;
+  font-size: 18px;
 }

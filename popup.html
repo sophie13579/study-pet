@@ -2,47 +2,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
   <title>Study Pet</title>
+  <script src="scripts/popup.js"></script>
 </head>
 
 
 <body>
-<script src="popup.js"></script>
 
 <h1>Study Pet</h1>
 
 <!-- Tabs -->
 <div class="tabs">
   <div>
-    <button class="tab" id="home-button"><img src="tab_icons/home.png" draggable="false" alt="Home"></button>
+    <button class="tab" id="home-button"><img src="images/tab_icons/home.png" draggable="false" alt="Home"></button>
     <p class="tab-text centred-text" id="home-text">Home</p>
-    <img src="tab_icons/active_tab.png" class="active-line" />
+    <img src="images/tab_icons/active_tab.png" class="active-line" />
   </div>
   <div>
-    <button class="tab" id="pomodoro-button"><img src="tab_icons/pomodoro.png" draggable="false" alt="Pomodoro"></button>
+    <button class="tab" id="pomodoro-button"><img src="images/tab_icons/pomodoro.png" draggable="false" alt="Pomodoro"></button>
     <p class="tab-text centred-text" id="pomodoro-text">Pomodoro</p>
-    <img src="tab_icons/active_tab.png" class="active-line" />
+    <img src="images/tab_icons/active_tab.png" class="active-line" />
   </div>
   <div>
-    <button class="tab" id="food-button"><img src="tab_icons/food.png" draggable="false" alt="Food"></button>
+    <button class="tab" id="food-button"><img src="images/tab_icons/food.png" draggable="false" alt="Food"></button>
     <p class="tab-text centred-text" id="food-text">Food Basket</p>
-    <img src="tab_icons/active_tab.png" class="active-line" />
+    <img src="images/tab_icons/active_tab.png" class="active-line" />
   </div>
   <div>
-    <button class="tab" id="shop-button"><img src="tab_icons/shop.png" draggable="false" alt="Shop"></button>
+    <button class="tab" id="shop-button"><img src="images/tab_icons/shop.png" draggable="false" alt="Shop"></button>
     <p class="tab-text centred-text" id="shop-text">Shop</p>
-    <img src="tab_icons/active_tab.png" class="active-line" />
+    <img src="images/tab_icons/active_tab.png" class="active-line" />
   </div>
   <div>
-    <button class="tab" id="pets-button"><img src="tab_icons/pets.png" draggable="false" alt="Pets"></button>
+    <button class="tab" id="pets-button"><img src="images/tab_icons/pets.png" draggable="false" alt="Pets"></button>
     <p class="tab-text centred-text" id="pets-text">Pet Gallery</p>
-    <img src="tab_icons/active_tab.png" class="active-line" />
+    <img src="images/tab_icons/active_tab.png" class="active-line" />
   </div>
   <div>
-    <button class="tab" id="leaderboard-button"><img src="tab_icons/leaderboard.png" draggable="false" alt="Leaderboard"></button>
+    <button class="tab" id="leaderboard-button"><img src="images/tab_icons/leaderboard.png" draggable="false" alt="Leaderboard"></button>
     <p class="tab-text centred-text" id="leaderboard-text">Leaderboard</p>
-    <img src="tab_icons/active_tab.png" class="active-line" />
+    <img src="images/tab_icons/active_tab.png" class="active-line" />
   </div>
 </div>
 
@@ -50,7 +50,7 @@
 <div class="tab-content" id="home-tab">
   <div class="stack-columns">
     <div class="image-container left-align">
-      <img src="cat_animated.gif" alt="Cat Singing" width="250" draggable="false" />
+      <img src="images/home/cat_animated.gif" alt="Cat Singing" width="250" draggable="false" />
       <p class="centred-text">Larry</p>
     </div>
 
@@ -86,7 +86,30 @@
 </div>
 
 <!-- Pomodoro Tab -->
-<div class="tab-content" id="pomodoro-tab"></div>
+<div class="tab-content" id="pomodoro-tab">
+
+  <div class="tomato-timer centred-element">
+    <img src="images/timer/tomato.png" alt="Tomato" draggable="false" />
+    <p class="tomato-text">00:00</p>
+  </div>
+
+  <div class="timer-buttons">
+    <div class="pause-unpause-stack">
+      <button class="timer-button" id="unpause-button">
+        <img src="images/timer/buttons/unpause.png" alt="Start" draggable="false" />
+      </button>
+      <button class="timer-button" id="pause-button">
+        <img src="images/timer/buttons/pause.png" alt="Pause" draggable="false" />
+      </button>
+    </div>
+
+    <button class="timer-button" id="reset-button">
+      <img src="images/timer/buttons/reset.png" alt="Reset" draggable="false" />
+    </button>
+  </div>
+
+  <p class="completed-pomodoros">0/4</p>
+</div>
 
 <!-- Food Tab -->
 <div class="tab-content" id="food-tab"></div>
